@@ -1791,20 +1791,29 @@
     document.addEventListener('click', handleFirstClick, { once: true });
 </script>
 <script>
-  // Chặn click & mở player cho YouTube + Rumble
+  /* Bắt click video YouTube + Rumble, mở player với ID thuần */
   document.querySelectorAll('a.link-btn').forEach(link => {
-    // Nhận diện link video
-    const isYoutube = link.href.includes('youtu');
-    const isRumble  = link.href.includes('rumble.com');
+    const href = link.getAttribute('href');
+    const isYT = /youtu\.?be/.test(href);
+    const isRumble = /rumble\.com/.test(href);
 
-    if (isYoutube || isRumble) {
+    if (isYT || isRumble) {
       link.addEventListener('click', e => {
-        e.preventDefault();                         // Không mở thẳng URL gốc
-        const encoded = encodeURIComponent(link.href);
-        window.open(
-          `player/player.html?video=${encoded}&token=ok`,
-          '_blank'
-        );
+        e.preventDefault();
+
+        let id = '';
+
+        if (isYT) {
+          const m = href.match(/(?:embed\/|watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{6,11})/);
+          if (m) id = m[1];
+        } else { // Rumble
+          const m = href.match(/\/v([0-9a-z]+)-?/i);
+          if (m) id = m[1];
+        }
+
+        if (!id) return window.open(href, '_blank'); // fallback
+
+        window.open(`player/player.html?video=${id}&token=ok`, '_blank');
       });
     }
   });
