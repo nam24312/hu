@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nền tảng học tập</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nền tảng học tập</title>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -290,1259 +291,1243 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🎓 Nền tảng học tập trực tuyến</h1>
-            <p>Chọn môn học và nhập mật khẩu để truy cập nội dung</p>
-        </div>
-
-        <div id="main-page">
-            <div class="subjects-grid">
-                <div class="subject-card subject-math">
-                    <h3>📊 Toán học</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('math')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Toán" data-subject="math">
-                        <button class="unlock-btn" onclick="unlockSubject('math')">Mở khóa</button>
-                        <div class="error-message" id="error-math"></div>
-                    </div>
-                </div>
-
-                <div class="subject-card subject-physics">
-                    <h3>⚛️ Vật lý</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('physics')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Vật lý" data-subject="physics">
-                        <button class="unlock-btn" onclick="unlockSubject('physics')">Mở khóa</button>
-                        <div class="error-message" id="error-physics"></div>
-                    </div>
-                </div>
-
-                <div class="subject-card subject-chemistry">
-                    <h3>🧪 Hóa học</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('chemistry')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Hóa học" data-subject="chemistry">
-                        <button class="unlock-btn" onclick="unlockSubject('chemistry')">Mở khóa</button>
-                        <div class="error-message" id="error-chemistry"></div>
-                    </div>
-                </div>
-
-                <div class="subject-card subject-history">
-                    <h3>📚 Lịch sử</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('history')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Lịch sử" data-subject="history">
-                        <button class="unlock-btn" onclick="unlockSubject('history')">Mở khóa</button>
-                        <div class="error-message" id="error-history"></div>
-                    </div>
-                </div>
-
-                <div class="subject-card subject-biology">
-                    <h3>🧬 Sinh học</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('biology')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Sinh học" data-subject="biology">
-                        <button class="unlock-btn" onclick="unlockSubject('biology')">Mở khóa</button>
-                        <div class="error-message" id="error-biology"></div>
-                    </div>
-                </div>
-
-                <div class="subject-card subject-english">
-                    <h3>🇬🇧 Tiếng Anh</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('english')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Tiếng Anh" data-subject="english">
-                        <button class="unlock-btn" onclick="unlockSubject('english')">Mở khóa</button>
-                        <div class="error-message "“id="error-english"></div>
-                    </div>
-                </div>
-
-                <div class="subject-card subject-geography">
-                    <h3>🌍 Địa lý</h3>
-                    <div class="password-form">
-                        <button class="preview-btn" onclick="showPreview('geography')">👁️ Xem trước</button>
-                        <input type="password" class="password-input" placeholder="Nhập mật khẩu môn Địa lý" data-subject="geography">
-                        <button class="unlock-btn" onclick="unlockSubject('geography')">Mở khóa</button>
-                        <div class="error-message" id="error-geography"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Trang nội dung Toán học -->
-        <div id="math-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>📊 Môn Toán học</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Video 2</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
+<div class="container">
+<div class="header">
+<h1>🎓 Nền tảng học tập trực tuyến</h1>
+<p>Chọn môn học và nhập mật khẩu để truy cập nội dung</p>
+</div>
+<div id="main-page">
+<div class="subjects-grid">
+<div class="subject-card subject-math">
+<h3>📊 Toán học</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('math')">👁️ Xem trước</button>
+<input class="password-input" data-subject="math" placeholder="Nhập mật khẩu môn Toán" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('math')">Mở khóa</button>
+<div class="error-message" id="error-math"></div>
+</div>
+</div>
+<div class="subject-card subject-physics">
+<h3>⚛️ Vật lý</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('physics')">👁️ Xem trước</button>
+<input class="password-input" data-subject="physics" placeholder="Nhập mật khẩu môn Vật lý" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('physics')">Mở khóa</button>
+<div class="error-message" id="error-physics"></div>
+</div>
+</div>
+<div class="subject-card subject-chemistry">
+<h3>🧪 Hóa học</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('chemistry')">👁️ Xem trước</button>
+<input class="password-input" data-subject="chemistry" placeholder="Nhập mật khẩu môn Hóa học" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('chemistry')">Mở khóa</button>
+<div class="error-message" id="error-chemistry"></div>
+</div>
+</div>
+<div class="subject-card subject-history">
+<h3>📚 Lịch sử</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('history')">👁️ Xem trước</button>
+<input class="password-input" data-subject="history" placeholder="Nhập mật khẩu môn Lịch sử" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('history')">Mở khóa</button>
+<div class="error-message" id="error-history"></div>
+</div>
+</div>
+<div class="subject-card subject-biology">
+<h3>🧬 Sinh học</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('biology')">👁️ Xem trước</button>
+<input class="password-input" data-subject="biology" placeholder="Nhập mật khẩu môn Sinh học" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('biology')">Mở khóa</button>
+<div class="error-message" id="error-biology"></div>
+</div>
+</div>
+<div class="subject-card subject-english">
+<h3>🇬🇧 Tiếng Anh</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('english')">👁️ Xem trước</button>
+<input class="password-input" data-subject="english" placeholder="Nhập mật khẩu môn Tiếng Anh" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('english')">Mở khóa</button>
+<div class="error-message" “id="error-english"></div>
+</div>
+</div>
+<div class="subject-card subject-geography">
+<h3>🌍 Địa lý</h3>
+<div class="password-form">
+<button class="preview-btn" onclick="showPreview('geography')">👁️ Xem trước</button>
+<input class="password-input" data-subject="geography" placeholder="Nhập mật khẩu môn Địa lý" type="password"/>
+<button class="unlock-btn" onclick="unlockSubject('geography')">Mở khóa</button>
+<div class="error-message" id="error-geography"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Trang nội dung Toán học -->
+<div class="content-page" id="math-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>📊 Môn Toán học</h2>
+<table class="content-table">
+<thead>
 <tr>
-            <td>TÊN BÀI HỌC</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Bài giải</span></td>
-            <td><span class="disabled-link">Tài liệu</span></td>
-        </tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Video 2</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
 <tr>
-  <td>Tiết 1: Tìm khoảng Đồng biến, Nghịch biến</td>
-  <td><a href="player.html?video=https://www.youtube.com/embed/NAuLI_cW3WY" class="link-btn" target="_blank">Xem video</a></td>
-  <td><a href="https://drive.google.com/open?id=1jq1VJTA4Z1DYp7OV4hDoB4VkvVCfZB-X" class="link-btn" target="_blank">Bài giải</a></td>
-  <td><a href="https://youtu.be/WVrk85q3-CE" class="link-btn" target="_blank">Tài liệu</a></td>
+<td>TÊN BÀI HỌC</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><span class="disabled-link">Tài liệu</span></td>
 </tr>
 <tr>
-            <td>[Tiết 2]: Biện luận tính đơn điệu theo tham số m (Buổi 1)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/SSdRvow_-bM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/6M3CSpWfunE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1tvDT_g4XDiJoyc0tA9Iqg5Fbm_yo8nfs&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Biện luận tính đơn điệu theo tham số m (Buổi 2)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/PDakkbXZU74" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/XLQ2SdKlxJ0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1x8SoMqXL4Inf0FGDpippG-I0LxtALoHK&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 3: Luyện tập thêm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/1WgQNsvlpTw" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1L9aqiZSiIy4cUO4JtvofqJTVFR3JAprv&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1] Xác định cực trị (Cực đại, cực tiểu)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/FZz3h9zsp4Y" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/uXvmgAfxy04" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1jkV8p9RD9fhK5xfFFnyT5MuHH7bSBLEf&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2] Tìm m để hàm số đạt cực đại, cực tiểu tại 1 điểm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/fZ3tAcM6Eg0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/PROjsdNjzzk" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1-1bgJrXQlCaMf6mURoI6M4nTMUU6RiA3&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Luyện tập thêm Tiết 1 và Tiết 2</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/N2Ntq1lku34" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1Q04KQkxdR6AKCNHB7gOJ1vtAXwXpvBHw&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3] Cực trị hàm số bậc 3</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/nT8Ovcz7yH4" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1MgaybjAh1l8oUvwGoH0QjL5c-2-zON2D&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 4] Cực trị hàm số bậc 4 trùng phương</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/d7Ctvs6aF78" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=19umwuxIHB-H4rYPv4qCEGtguZzoWBRrV&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Luyện tập thêm Tiết 3 và Tiết 4</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/duVAQYU1290" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1rFSNqnNHz4irOkkdtErRIhTwmxY8K10M&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Xác định GTLN – GTNN của hàm số</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/i5XjnWBubTw" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/KtoGWtMDC_o" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=14UnhrM9B92bTnkd1_XhlX49ZhEYP-ugi&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Biện luận tham số m</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/eMLxIjOr2oc" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/tXTve86QRVA" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1wRhJAtLi8FXFUS2eu4FBuGSAHQTBZvWJ&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Luyện tập thêm tìm GTLN, GTNN của hàm số</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/2UUk4WHr02k" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1gdFCbhiTQTLx3r9HY57KOT2qqk5fkrJm&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 3: Ứng dụng đạo hàm tim min max bài toán liên quan đến thực tiễn</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/8G6AgDrARm8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/Zda_UzSVuX4" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1eEqUaT7XYt5UeI0axnd6XfoltW7Imdc1&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Ứng dụng đạo hàm tìm GTLN, GTNN - Bài toán tối ưu (Phần 2)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/ZHaqJATviQc" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1ighj-TIArwAM5h7FAnz2ZkHf7FTps55p&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 4] Tìm điều kiện để hàm số đạt GTLN, GTNN</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/DuxJeZOm0k0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/tXTve86QRVA" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=13_H1D0jxXVk4nrtVnf2_lZO-qwEorlhP&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>TIẾT 1: XÁC ĐỊNH ĐƯỜNG TIỆM CẬN ĐỨNG, ĐƯỜNG TIỆM CẬN NGANG</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/3cXaRwtB9D0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/PQNof7BQVv8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1D8lbxgBOdtbzxe9nyPfbxdcQqCVvvMoO&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Biện luận đường tiệm cận đứng, tiệm cận ngang</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/c5XwWrbrZFE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/wp3eBQoyJK0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1TdJPA3WI6ynzApH292m_9cVpj4cfkXC5&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 3: Đường tiệm cận xiên</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/7JSCiXSwuy8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1Cl9Cm8q7mMLFHK1dv_0ohARNi7LlyMuU&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>TIẾT 1: CÁCH VẼ ĐỒ THỊ HÀM SỐ BẬC 3 VÀ HÀM SỐ BẬC 4 TRÙNG PHƯƠNG</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/VZeMp5jYnKU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=15FOVjJYL0wXDj1HLBmH8ZsVIJHAd3FVf&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>CÁCH VẼ ĐỒ THỊ HÀM PHÂN THỨC BẬC NHẤT</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/heqF9cCsjm4" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1ysFnhsYjrhr1hkvB19Km7o2etNOjfj5q&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>CÁCH VẼ ĐỒ THỊ HÀM SỐ CHỨA DẤU GIÁ TRỊ TUYỆT ĐỐI</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/2vPdgURRgXo" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1GsCuvl8xowMy5mbBLHf5ajvfN1HFjtVH&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>BT TRẮC NGHIỆM NHẬN BIẾT HÌNH DÁNG ĐỒ THỊ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/j-AdPxzutNE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1Fm5f3pCu11Cm9BDtmewD2WvJKSq9va2C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>TIẾT 2: LUYỆN TẬP ĐỒ THỊ HÀM SỐ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/8LCArt8dXKo" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1u-BKXvTqxYTFuQMh7T-lC1hR-89gRIr5&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3] ĐỒ THỊ PHÂN THỨC BẬC 2 TRÊN BẬC 1</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/OI3nMgEblCM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1d5Syj_wcXXoXqSi7qDkMcaKU23WSqb0h&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Đếm số nghiệm dựa vào hình dáng đồ thị</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/DxzTdudt6xM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1VW3zkLQCufoQ4Lfl5bfllYNIa6mxzf3i&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Các bài toán tìm m Hàm Bậc 3 , Trùng phương , phân thức</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/d9VEI0BhSnY" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1_bdr6rlrb14cpu-cSEsHv5YFFIxBanOY&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Cách đọc đồ thị đạo hàm f `(x)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/Ny95iUJ7suU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1OUrfL8KYGMYjKUW5HtrY-iOqryMyIfl_&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Tính đơn điệu của hàm hợp (Phần 1)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/saqLUAQSbfo" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1M2QR5u_FrSyOPIgvI1786PuP9feKvS9O&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 3: Luyện tập thêm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/iW7cleHFktQ" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=18epOlEcRAvkwyfzd_9Hl7z5dYhuoeumX&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tính đơn điệu của hàm hợp (Phần 2)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/lOau6xb9DbM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1TVJtVJmqihBikyR5SSKgaonyYuEPsKYo&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Xác định cực trị của hàm hợp (Buổi 1)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/HaXWZ_5aFTg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1Q5N-ISx7LumZb7_CruAl_92p4AgPvcBn&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Luyện tập thêm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/diUDNsigCEo" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1T8XqrnzJbA3OoPjPYqFMU9Nbs38-ypJy&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Xác định cực trị của hàm hợp (Phần 2)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/QVsCtmnYg_Q" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1W6bKGbO2GW9JCP7IZS84-F3ppUxetycn&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Minmax hàm hợp</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/X12kYWGetEA" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=18gpCa1W2BFBsjKNmH8Sp-YKYKjExNosn&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Đếm số nghiệm hàm hợp</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/3J3hGhouDBg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=181hoKc2PReNg0j8w3wJat8VHOfXHvEzi&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Biện luận số nghiệm hàm hợp</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/QeEV3frBsl4" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1mQA1VSX0cPhxoOZwdqivbGMIUOy38djy&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 3: Phương pháp ghép trục</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/iN-scWICZkE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1G8M3ETfbjzUqSwK_JMHCM9YluLWpvnNw&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 4: Luyện tập thêm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/4QQjWjaLW8c" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1kIsbWey1UwcuOlTVER1kv3-6PahwCM53&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Cực trị hàm y=f(x)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/xPH_D3l_4IA" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1XiUW0S7_hkazkQPQWmT_iA1B2B4eYDM8&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2 : Cực trị hàm y=f(x)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/-RRuTMrowB8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1ZDUkGrslKEv58S4nTEx_77aZvNPf98nP&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 1: Phương trình tiếp tuyến tại điểm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/OYikwYCeAzg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1hTTGUPy6gakrpWhnuzW4pYNQWWQx31BV&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tiết 2: Phương trình tiếp tuyến qua điểm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/H9kzYMjH99w" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1QLTPYLiuMCz9M3dbIxbzk0phQZr8oqJD&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>KHÁI NIỆM VÀ QUY TẮC VECTƠ TRONG KHÔNG GIAN</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/gFsS_WCUIQ0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1KUJTHN72aNkPWo8WZWva89fEQ_oOLlmw&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>PHÉP TOÁN VECTƠ TRONG HÌNH CHÓP, TỨ DIỆN</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/2iF9KmOvvew" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1AbKzUJ8tcXbFin8QX2V_tSY8zpRO83Qt&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>PHÉP TOÁN VECTƠ TRONG HÌNH HỘP, LĂNG TRỤ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/17ugIeKtlpc" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1aFG5cWtjpf1Xpep4sEtU6QrzdNmdgXrg&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>BÀI VỀ NHÀ LUYỆN TẬP</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/QmMJ48Gl2l0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1sXDW_mfWZ2b7EoMsyHuVvV2As_VbJmF8&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>GÓC GIỮA 2 VECTƠ - TÍCH VÔ HƯỚNG 2 VECTƠ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/hzJL0QPqcg0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/0uKV38UUKh8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><a href="https://drive.google.com/open?id=1lEP0imZxaLvDRJnLgOORvDK5wK8GISKX&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1] TỌA ĐỘ ĐIỂM - CÁC CÔNG THỨC VECTƠ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/oK7TiQtY-9I" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=170w9ierKYxWf1ZX0tkJzJQHJngtIur2i&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2] TÍCH CÓ HƯỚNG CỦA VECTƠ VÀ ỨNG DỤNG</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/gQtSiAcyKBU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=16z4ZkfoQ64aUcnQQtoDgRo-toqnKvLKq&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/esfy-42I9cI" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1QLucYKYS3_ZR4-vjHD3A-DrVR0kOHZzV&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>HƯỚNG DẪN BẤM MÁY TÍNH TỌA ĐỘ VECTO TRONG KHÔNG GIAN (OXYZ)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/bA7xzxGEVGI" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1NcjwwJaP4bS3upDBLhql27N-bYbmGvRA&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM ( TRẮC NGHIỆM 4 ĐÁP ÁN )</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/esfy-42I9cI" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/1CkEvDuMZfasUu8zb4V6U25d06GhkfeBw/view?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM (TRẮC NGHIỆM ĐÚNG SAI - ĐIỀN ĐÁP ÁN)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/YtN_4BUaUZs" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/11R_-Q1CgIWlW6FqYOepPSKyXpWVlZS91/view?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1] ĐẶT HỆ TRỤC OXYZ VÀO HÌNH CHÓP - LĂNG TRỤ - HÌNH HỘP</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/bU1fk3iV9ak" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/1p7m7FOvj-tpyRmcliWMcURCXhZ3BVuG2/view?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2] TÍNH KHOẢNG CÁCH GIỮA 2 ĐT CHÉO NHAU BẰNG PP ĐẶT TRỤC</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/NtsoOVgSuRg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/1Ba3t1GTH5UPn1Bh3_AeLcUQcJQxiZoW8/view?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3] TÍNH GÓC GIỮA 2 ĐƯỜNG THẲNG - 2 MẶT PHẲNG BẰNG PP ĐẶT TRỤC</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/QYM5VwUwVQo" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/1d33cAfdvtfSjD4em785I6G1lnLMfQrdL/view?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 1 (ĐẠI)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/Q_q9L5YWvWc" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1RCfEtBK2A5bxVCPCzPnMEm3OtkhQiK4x?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 2 (ĐẠI)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/oo-lyw6q49s" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1LJj6a8XirZ2hltn2hVZWoqSe90MsPzfn?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 3 (ĐẠI)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/KPsiJ-ngWlg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1u7qGfMIduqwLwTQ6AnBziS45ZgNbEVgf?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 4 (ĐẠI + HÌNH)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/Tzffgkyf5mc" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1ZrRwYgncs5EYtuzpPEkC93ij49LQkBYc?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 5 (ĐẠI + HÌNH)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/FzzyePiVj4w" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1scrdp_MxsA9kYLmfWxySa7DoVR0xuvAU?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 6 (ĐẠI + HÌNH)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/oKzfc-CFoDw" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1Cq-3nEGYjQy1kP3VwGwmlfOEc5DJpNcZ?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 7 (ĐẠI + HÌNH)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/hPCeXpfMNoU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1jntQ-63L7oVfIWjWkBBDQZQmtwhEjnZc?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 8 (ĐẠI + HÌNH)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/uRDYA7sBymY" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1s4IVmD-7LDOagx5hqxmG-rZlcI7X1wa2?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 9 (ĐẠI + HÌNH)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1CVnuEzPDA-gD4_yCkfUF6kKtjBtwUEVZ?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 10 (ĐẠI + HÌNH)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/drive/folders/1DqFbdkxN1AX6VziJQ1rx41d64iVpwKT4?usp=drive_link" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1] TÍNH TỨ PHÂN VỊ Q1 VÀ Q3 CỦA MẪU SỐ LIỆU GHÉP NHÓM</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/plGPuLhn2tI" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/1FJPER1HvNN34uB4nJ3jQg08OMfdPb_0K/view" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2] TÍNH KHOẢNG TỨ PHÂN VỊ VÀ KHOẢNG BIẾN THIÊN</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/bqWZUP0LkgY" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/13aUG8cN2ppBARZmwFxY3vbWovStqQ-gG/view" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>TÍNH SỐ TRUNG BÌNH, PHƯƠNG SAI VÀ ĐỘ LỆCH CHUẨN</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/x0F9TsswdA4" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/file/d/1449NxJnBfqf9yt6Rm6LOOlisUSpnmdUO/view" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ÔN TẬP THỐNG KÊ L12 - ỨNG DỤNG THỰC TẾ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/pqdAtynn9Io" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1AjlyjISaD5vAgY_fmWtJ_YYS9-iNIP9f&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1: Nguyên hàm cơ bản</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/rzvtjkhG6og" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=10vD1SX0bP7HLycl1L88oa_i9R63fjxW3&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2: Nguyên hàm hàm hợp</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/47fmE5Ok4bA" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1ozkB0rVVjPgS3ntziIpR7EvOnURh9uJg&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 3: Phương pháp đổi biến</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/kmnOPgE6IOo" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1jYSGvs4fTzx-Hv5rhP9zJG7k-Wbwnpqn&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 4: Nguyên hàm hữu tỉ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/rciD9huIeQs" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wD_V8UDdbVOz-SBQrAX_Os2g2P-0trPW&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 5: Nguyên hàm hữu tỉ (Phần 2)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/LKa4HLDe3-o" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1totwb-Ewk7y9HqbU6fzksx3P8t0Pz5p6&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 6: Nguyên hàm lượng giác</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/7DK0ZVsNgJQ" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1JYGaVK1bmFHZKbdTywCAyb2MSePRXu3F&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 7: Dùng đổi biến trong lượng giác</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/eW3p2_212Po" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1Kww_xIYZV5iujKsZ_0y_uilIhHq_EaCG&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 8: Nguyên hàm từng phần (Phần 1)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/cE5nDTjjGAk" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=17bWh2PhQmatnNI0MtLW0_4lAUIxzIkEM&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 9: Nguyên hàm từng phần (Phần 2)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/ql2CAZPupAs" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=11DXy-HeogdfityBMIjzj4SmER2ga0RWC&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1: Tích phân xác định</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/f3ovbIJ90tU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1euA4RIE2vvTzKPRQ1i380ZO0Tm3GfetE&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2: Tích phân đổi biến</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/1pW8SmO9ATI" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1_GgrfEkGSgURBilMXoalq2brL9fx0MYA&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 3: Tích phân từng phần</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/7QY9h8gjoHU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1scrb8sqftGHIHR4EEMPGun3h-tXZMQIg&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 4: Tích phân xác định trong các đề thi đại học</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/FDaRpzYsJa8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1e_gcLZ4r7G3CuWodOserulAcxy1vR7Yk&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1: Tính diện tích hình phẳng và V khối tròn xoay - bài toán không cho hình vẽ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/fSjUIZ1mnW8" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1tzCMT42n63XeqOGBDPMaLFz63iuu5yIn&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2: Tính diện tích hình phẳng có hình vẽ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/WxdX771puzE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1af29O1z8ZCh1qsjcw633QACuQ-qMEt5p&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 3: Bài toán chuyển động</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/9ZZ_5n31f-0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1kOLxVwx1-_ngIiNkd83Yp1XKnC6ypGe-&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 4: Thể tích khối tròn xoay có hình vẽ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/r4LtYFs2EJw" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=14Bl02TbRX1fI0YyjW-Ib20MmrcmWow9W&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1: Phương pháp đổi biến</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/exrmuIKHZLM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1x3NN3n1jGNIpB5d54dvMA9kg4bAbFrjt&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2: Phương pháp từng phần</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/ohivLY7y20Y" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12QypapSp9bnWqoIBmtYT45uoqmmcUUaa&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 3: Bài toán cho f phẩy và tìm f(x)</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/KsyL217yQgk" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1fbstbKKmFB6fUUkwBMIMg257FhEZvTBT&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/EDXLzNpqQec" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1vreNYJpoKD5UxB_x4E0hFWX6ObbCu5Td&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/HKb1UEC4BlU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1uZYuJl3QwT3xK7akpZn79krOWDBCtDDf&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 3</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/ahE3fIbDHxY" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1SWZ1QW0i5WfPJjv5Sa7une_ZhEHCYuhn&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/rvS-FnKeyk0" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=13FaWJv0kfNqx9IKvucftDXvaIMarpf5b&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/NfVnKYiJ600" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1UA4AxQVkfBB-oxqDYBSYOsQQRTd-XHdw&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 3</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/uILFs7AnfSg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1j5zsNS3UZTrKxjjMKMB-SXrjfygioKzP&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1: Phương trình mặt cầu</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/5aunyfuTN9Y" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1It7Y5hno-q2sKihbjR07UdD2QeDYW6t3&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2: Bấm máy hình không gian Oxyz</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/m-uH-XRv2fk" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1_7FnU99OGq1I_9dtFYtiHV0yDX3Rt0Gv&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tọa độ hình chiếu - Điểm đối xứng</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/3iNd4v7xQZE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-pcFPYnnuX9-NN079gu-y4EzceDBkT8F&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Tìm điểm thuộc đường thẳng</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/pCUZRzzHFtE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1FapGwcliO4Ks0gDShjp1mS_N7byRDdBe&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Bài toán min max liên quan đến hình chiếu của điểm</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/b-RYehbS5oM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1hN-9Y0zxACynd_jujbUOVe0lZXMgD_Ze&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Điểm và đường đặc biệt trong tam giác</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/R1vTXj4kBAA" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wZ3f4amar5D-WJGQPdr6ds2nATFFti_W&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 1: Đặt trục vào hình chóp</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/vVZQui3bvQc" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1uruPgorle6f22H9e97qcLON0Z8FXrb4O&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>Phần 2: Đặt trục vào lăng trụ</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/KPXVIDpIjgM" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1580SCOkn5YOL-Jly_Q01Ls5RKGsq_Zgo&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ 1</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/4aYQ6RH9Arg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ 2</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/Qe-jfXf9kTE" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ 3</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/QZnkp7Jo2kU" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ 4</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/Z7pP9HVH4HQ" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ 5</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/n3HaFIta5Qg" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ 6</td>
-            <td><a href="player.html?video=https://www.youtube.com/embed/tqXs_ygGq0o" class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: NGUYÊN HÀM CƠ BẢN</td>
-            <td><span class="player.html?video=https://rumble.com/embed/v6l2pqv/"   class="link-btn" target="_blank">Xem video</a></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: NGUYÊN HÀM HÀM HỢP</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3]: NGUYÊN HÀM HỮU TỈ</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 4]: NGUYÊN HÀM LƯỢNG GIÁC</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>HƯỚNG DẪN BẤM MÁY TÍNH NGUYÊN HÀM</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>TÍNH TÍCH PHÂN</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=11tzp-ekbrBX9z7xDtEMU7tvTNtZ3UbhQ&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>HƯỚNG DẪN BẤM MÁY TÍNH TÍCH PHÂN</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=11tzp-ekbrBX9z7xDtEMU7tvTNtZ3UbhQ&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: TÍNH DIỆN TÍCH HÌNH PHẲNG &amp; THỂ TÍCH KHỐI TRÒN XOAY (KHÔNG HÌNH VẼ)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: TÍNH DIỆN TÍCH HÌNH PHẲNG CÓ HÌNH VẼ (P1)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>TÍNH DIỆN TÍCH HÌNH PHẲNG CÓ HÌNH VẼ (P2)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY CÓ HÌNH VẼ</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 4]: ỨNG DỤNG TRONG BÀI TOÁN CHUYỂN ĐỘNG</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 5]: BÀI TOÁN THỰC TẾ TÍNH DIỆN TÍCH</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 6]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY (KHÔNG CÓ HÌNH VẼ)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 7]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY (CÓ HÌNH VẼ ĐỒ THỊ)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 8]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY QUANH TRỤC TUNG</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM: ỨNG DỤNG BÀI TOÁN CHUYỂN ĐỘNG - DẠNG BÀI ĐÚNG SAI</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM: ỨNG DỤNG HÌNH HỌC CỦA TÍCH PHÂN - DẠNG BÀI ĐÚNG SAI</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM: TỔNG ÔN TẬP NGUYÊN HÀM - TÍCH PHÂN</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM: TỔNG ÔN NGUYÊN HÀM - TÍCH PHÂN (DẠNG BÀI ĐÚNG SAI)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LUYỆN TẬP THÊM: TỔNG ÔN TẬP NGUYÊN HÀM - TÍCH PHÂN (DẠNG BÀI TRẢ LỜI NGẮN)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: XÁC ĐỊNH CÁC YẾU TỐ, TÍNH GÓC &amp; TÌM VỊ TRÍ TƯƠNG ĐỐI</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-AZ5VRkaulR3Jr3WNhIkUAbVBfROum5t&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: LẬP PHƯƠNG TRÌNH KHI BIẾT VECTƠ PHÁP TUYẾN &amp; ĐIỂM</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-AZ5VRkaulR3Jr3WNhIkUAbVBfROum5t&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3]: LẬP PHƯƠNG TRÌNH CÓ YẾU TỐ KHOẢNG CÁCH</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-AZ5VRkaulR3Jr3WNhIkUAbVBfROum5t&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: XÁC ĐỊNH CÁC YẾU TỐ, TÌM VỊ TRÍ TƯƠNG ĐỐI, TÍNH KHOẢNG CÁCH, TÍNH GÓC</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-tJeX4LPTP4Z0mvWMJJgdHqjyw1kk6CR&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: LẬP PHƯƠNG TRÌNH KHI BIẾT VECTƠ CHỈ PHƯƠNG &amp; ĐIỂM</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-tJeX4LPTP4Z0mvWMJJgdHqjyw1kk6CR&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3]: LẬP PHƯƠNG TRÌNH CÓ YẾU TỐ GIAO ĐIỂM</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-tJeX4LPTP4Z0mvWMJJgdHqjyw1kk6CR&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>LẬP PHƯƠNG TRÌNH MẶT CẦU &amp; BÀI TOÁN VỊ TRÍ TƯƠNG ĐỐI</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=10cOiQ4HCUECjGtZsyZ4UI-c_IokNeecO&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: TÌM ĐIỂM THUỘC ĐƯỜNG THẲNG</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: TÌM HÌNH CHIẾU &amp; ĐIỂM ĐỐI XỨNG</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3]: BÀI TOÁN MINMAX LIÊN QUAN ĐẾN HÌNH CHIẾU CỦA ĐIỂM</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 4]: ĐIỂM &amp; ĐƯỜNG ĐẶC BIỆT TRONG TAM GIÁC</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 1</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 2</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 3</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 4</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 5</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 6</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 7</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 8</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 9</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>ĐỀ SỐ 10</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: CÔNG THỨC TÍNH XÁC SUẤT CÓ ĐIỀU KIỆN</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-CFDKcRvHVQqGFr_AHcxe_lP76-odMq3&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: TÍNH XÁC SUẤT KHI BIẾT TRƯỚC XÁC SUẤT THÀNH PHẦN</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1-Ak4hI3i9GGoTe_aEvjr_FDMYFX2h_gi&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 3]: TÍNH XÁC SUẤT THEO ĐỊNH NGHĨA - THEO CÔNG THỨC (PHẦN 1</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1KblhFgMYg1nH6OpO9i-7OWnqjeQQzALM&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 4]: TÍNH XÁC SUẤT THEO ĐỊNH NGHĨA - THEO CÔNG THỨC (PHẦN 2)</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1mPrQKINBiuUxgFZdXQYw6kwDVaTmcZVM&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 5]: BẢNG DỮ LIỆU 2x2</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=18yIKsSqA22-06S2mWmfGR-8QsGp7VL8z&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 1]: CÔNG THỨC XÁC SUẤT TOÀN PHẦN</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=1Qx1athZce4JvHVpzsavGrHUs177vnXHC&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
-<tr>
-            <td>[TIẾT 2]: CÔNG THỨC BAYES</td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><span class="disabled-link">Xem video</span></td>
-            <td><a href="https://drive.google.com/open?id=16WgB8U-E-tqnAspB2C10IZLzdCKLXYJK&usp=drive_copy" class="link-btn" target="_blank">Tài liệu</a></td>
-        </tr>
+<td>Tiết 1: Tìm khoảng Đồng biến, Nghịch biến</td>
+<td><a class="link-btn" href="player.html?video=NAuLI_cW3WY" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1jq1VJTA4Z1DYp7OV4hDoB4VkvVCfZB-X" target="_blank">Bài giải</a></td>
+<td><a class="link-btn" href="https://youtu.be/WVrk85q3-CE" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[Tiết 2]: Biện luận tính đơn điệu theo tham số m (Buổi 1)</td>
+<td><a class="link-btn" href="player.html?video=SSdRvow_-bM" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=6M3CSpWfunE" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1tvDT_g4XDiJoyc0tA9Iqg5Fbm_yo8nfs&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Biện luận tính đơn điệu theo tham số m (Buổi 2)</td>
+<td><a class="link-btn" href="player.html?video=PDakkbXZU74" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=XLQ2SdKlxJ0" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1x8SoMqXL4Inf0FGDpippG-I0LxtALoHK&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 3: Luyện tập thêm</td>
+<td><a class="link-btn" href="player.html?video=1WgQNsvlpTw" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1L9aqiZSiIy4cUO4JtvofqJTVFR3JAprv&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1] Xác định cực trị (Cực đại, cực tiểu)</td>
+<td><a class="link-btn" href="player.html?video=FZz3h9zsp4Y" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=uXvmgAfxy04" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1jkV8p9RD9fhK5xfFFnyT5MuHH7bSBLEf&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2] Tìm m để hàm số đạt cực đại, cực tiểu tại 1 điểm</td>
+<td><a class="link-btn" href="player.html?video=fZ3tAcM6Eg0" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=PROjsdNjzzk" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-1bgJrXQlCaMf6mURoI6M4nTMUU6RiA3&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Luyện tập thêm Tiết 1 và Tiết 2</td>
+<td><a class="link-btn" href="player.html?video=N2Ntq1lku34" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1Q04KQkxdR6AKCNHB7gOJ1vtAXwXpvBHw&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3] Cực trị hàm số bậc 3</td>
+<td><a class="link-btn" href="player.html?video=nT8Ovcz7yH4" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1MgaybjAh1l8oUvwGoH0QjL5c-2-zON2D&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 4] Cực trị hàm số bậc 4 trùng phương</td>
+<td><a class="link-btn" href="player.html?video=d7Ctvs6aF78" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=19umwuxIHB-H4rYPv4qCEGtguZzoWBRrV&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Luyện tập thêm Tiết 3 và Tiết 4</td>
+<td><a class="link-btn" href="player.html?video=duVAQYU1290" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1rFSNqnNHz4irOkkdtErRIhTwmxY8K10M&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Xác định GTLN – GTNN của hàm số</td>
+<td><a class="link-btn" href="player.html?video=i5XjnWBubTw" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=KtoGWtMDC_o" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=14UnhrM9B92bTnkd1_XhlX49ZhEYP-ugi&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Biện luận tham số m</td>
+<td><a class="link-btn" href="player.html?video=eMLxIjOr2oc" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=tXTve86QRVA" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wRhJAtLi8FXFUS2eu4FBuGSAHQTBZvWJ&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Luyện tập thêm tìm GTLN, GTNN của hàm số</td>
+<td><a class="link-btn" href="player.html?video=2UUk4WHr02k" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1gdFCbhiTQTLx3r9HY57KOT2qqk5fkrJm&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 3: Ứng dụng đạo hàm tim min max bài toán liên quan đến thực tiễn</td>
+<td><a class="link-btn" href="player.html?video=8G6AgDrARm8" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=Zda_UzSVuX4" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1eEqUaT7XYt5UeI0axnd6XfoltW7Imdc1&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Ứng dụng đạo hàm tìm GTLN, GTNN - Bài toán tối ưu (Phần 2)</td>
+<td><a class="link-btn" href="player.html?video=ZHaqJATviQc" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1ighj-TIArwAM5h7FAnz2ZkHf7FTps55p&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 4] Tìm điều kiện để hàm số đạt GTLN, GTNN</td>
+<td><a class="link-btn" href="player.html?video=DuxJeZOm0k0" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=tXTve86QRVA" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=13_H1D0jxXVk4nrtVnf2_lZO-qwEorlhP&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>TIẾT 1: XÁC ĐỊNH ĐƯỜNG TIỆM CẬN ĐỨNG, ĐƯỜNG TIỆM CẬN NGANG</td>
+<td><a class="link-btn" href="player.html?video=3cXaRwtB9D0" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=PQNof7BQVv8" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1D8lbxgBOdtbzxe9nyPfbxdcQqCVvvMoO&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Biện luận đường tiệm cận đứng, tiệm cận ngang</td>
+<td><a class="link-btn" href="player.html?video=c5XwWrbrZFE" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=wp3eBQoyJK0" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1TdJPA3WI6ynzApH292m_9cVpj4cfkXC5&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 3: Đường tiệm cận xiên</td>
+<td><a class="link-btn" href="player.html?video=7JSCiXSwuy8" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1Cl9Cm8q7mMLFHK1dv_0ohARNi7LlyMuU&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>TIẾT 1: CÁCH VẼ ĐỒ THỊ HÀM SỐ BẬC 3 VÀ HÀM SỐ BẬC 4 TRÙNG PHƯƠNG</td>
+<td><a class="link-btn" href="player.html?video=VZeMp5jYnKU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=15FOVjJYL0wXDj1HLBmH8ZsVIJHAd3FVf&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>CÁCH VẼ ĐỒ THỊ HÀM PHÂN THỨC BẬC NHẤT</td>
+<td><a class="link-btn" href="player.html?video=heqF9cCsjm4" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1ysFnhsYjrhr1hkvB19Km7o2etNOjfj5q&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>CÁCH VẼ ĐỒ THỊ HÀM SỐ CHỨA DẤU GIÁ TRỊ TUYỆT ĐỐI</td>
+<td><a class="link-btn" href="player.html?video=2vPdgURRgXo" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1GsCuvl8xowMy5mbBLHf5ajvfN1HFjtVH&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>BT TRẮC NGHIỆM NHẬN BIẾT HÌNH DÁNG ĐỒ THỊ</td>
+<td><a class="link-btn" href="player.html?video=j-AdPxzutNE" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1Fm5f3pCu11Cm9BDtmewD2WvJKSq9va2C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>TIẾT 2: LUYỆN TẬP ĐỒ THỊ HÀM SỐ</td>
+<td><a class="link-btn" href="player.html?video=8LCArt8dXKo" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1u-BKXvTqxYTFuQMh7T-lC1hR-89gRIr5&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3] ĐỒ THỊ PHÂN THỨC BẬC 2 TRÊN BẬC 1</td>
+<td><a class="link-btn" href="player.html?video=OI3nMgEblCM" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1d5Syj_wcXXoXqSi7qDkMcaKU23WSqb0h&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Đếm số nghiệm dựa vào hình dáng đồ thị</td>
+<td><a class="link-btn" href="player.html?video=DxzTdudt6xM" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1VW3zkLQCufoQ4Lfl5bfllYNIa6mxzf3i&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Các bài toán tìm m Hàm Bậc 3 , Trùng phương , phân thức</td>
+<td><a class="link-btn" href="player.html?video=d9VEI0BhSnY" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1_bdr6rlrb14cpu-cSEsHv5YFFIxBanOY&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Cách đọc đồ thị đạo hàm f `(x)</td>
+<td><a class="link-btn" href="player.html?video=Ny95iUJ7suU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1OUrfL8KYGMYjKUW5HtrY-iOqryMyIfl_&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Tính đơn điệu của hàm hợp (Phần 1)</td>
+<td><a class="link-btn" href="player.html?video=saqLUAQSbfo" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1M2QR5u_FrSyOPIgvI1786PuP9feKvS9O&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 3: Luyện tập thêm</td>
+<td><a class="link-btn" href="player.html?video=iW7cleHFktQ" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=18epOlEcRAvkwyfzd_9Hl7z5dYhuoeumX&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tính đơn điệu của hàm hợp (Phần 2)</td>
+<td><a class="link-btn" href="player.html?video=lOau6xb9DbM" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1TVJtVJmqihBikyR5SSKgaonyYuEPsKYo&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Xác định cực trị của hàm hợp (Buổi 1)</td>
+<td><a class="link-btn" href="player.html?video=HaXWZ_5aFTg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1Q5N-ISx7LumZb7_CruAl_92p4AgPvcBn&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Luyện tập thêm</td>
+<td><a class="link-btn" href="player.html?video=diUDNsigCEo" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1T8XqrnzJbA3OoPjPYqFMU9Nbs38-ypJy&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Xác định cực trị của hàm hợp (Phần 2)</td>
+<td><a class="link-btn" href="player.html?video=QVsCtmnYg_Q" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1W6bKGbO2GW9JCP7IZS84-F3ppUxetycn&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Minmax hàm hợp</td>
+<td><a class="link-btn" href="player.html?video=X12kYWGetEA" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=18gpCa1W2BFBsjKNmH8Sp-YKYKjExNosn&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Đếm số nghiệm hàm hợp</td>
+<td><a class="link-btn" href="player.html?video=3J3hGhouDBg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=181hoKc2PReNg0j8w3wJat8VHOfXHvEzi&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Biện luận số nghiệm hàm hợp</td>
+<td><a class="link-btn" href="player.html?video=QeEV3frBsl4" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1mQA1VSX0cPhxoOZwdqivbGMIUOy38djy&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 3: Phương pháp ghép trục</td>
+<td><a class="link-btn" href="player.html?video=iN-scWICZkE" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1G8M3ETfbjzUqSwK_JMHCM9YluLWpvnNw&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 4: Luyện tập thêm</td>
+<td><a class="link-btn" href="player.html?video=4QQjWjaLW8c" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1kIsbWey1UwcuOlTVER1kv3-6PahwCM53&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Cực trị hàm y=f(x)</td>
+<td><a class="link-btn" href="player.html?video=xPH_D3l_4IA" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1XiUW0S7_hkazkQPQWmT_iA1B2B4eYDM8&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2 : Cực trị hàm y=f(x)</td>
+<td><a class="link-btn" href="player.html?video=-RRuTMrowB8" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1ZDUkGrslKEv58S4nTEx_77aZvNPf98nP&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 1: Phương trình tiếp tuyến tại điểm</td>
+<td><a class="link-btn" href="player.html?video=OYikwYCeAzg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1hTTGUPy6gakrpWhnuzW4pYNQWWQx31BV&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tiết 2: Phương trình tiếp tuyến qua điểm</td>
+<td><a class="link-btn" href="player.html?video=H9kzYMjH99w" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1QLTPYLiuMCz9M3dbIxbzk0phQZr8oqJD&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>KHÁI NIỆM VÀ QUY TẮC VECTƠ TRONG KHÔNG GIAN</td>
+<td><a class="link-btn" href="player.html?video=gFsS_WCUIQ0" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1KUJTHN72aNkPWo8WZWva89fEQ_oOLlmw&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>PHÉP TOÁN VECTƠ TRONG HÌNH CHÓP, TỨ DIỆN</td>
+<td><a class="link-btn" href="player.html?video=2iF9KmOvvew" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1AbKzUJ8tcXbFin8QX2V_tSY8zpRO83Qt&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>PHÉP TOÁN VECTƠ TRONG HÌNH HỘP, LĂNG TRỤ</td>
+<td><a class="link-btn" href="player.html?video=17ugIeKtlpc" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1aFG5cWtjpf1Xpep4sEtU6QrzdNmdgXrg&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>BÀI VỀ NHÀ LUYỆN TẬP</td>
+<td><a class="link-btn" href="player.html?video=QmMJ48Gl2l0" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1sXDW_mfWZ2b7EoMsyHuVvV2As_VbJmF8&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>GÓC GIỮA 2 VECTƠ - TÍCH VÔ HƯỚNG 2 VECTƠ</td>
+<td><a class="link-btn" href="player.html?video=hzJL0QPqcg0" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="player.html?video=0uKV38UUKh8" target="_blank">Xem video</a></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1lEP0imZxaLvDRJnLgOORvDK5wK8GISKX&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1] TỌA ĐỘ ĐIỂM - CÁC CÔNG THỨC VECTƠ</td>
+<td><a class="link-btn" href="player.html?video=oK7TiQtY-9I" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=170w9ierKYxWf1ZX0tkJzJQHJngtIur2i&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2] TÍCH CÓ HƯỚNG CỦA VECTƠ VÀ ỨNG DỤNG</td>
+<td><a class="link-btn" href="player.html?video=gQtSiAcyKBU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=16z4ZkfoQ64aUcnQQtoDgRo-toqnKvLKq&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM</td>
+<td><a class="link-btn" href="player.html?video=esfy-42I9cI" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1QLucYKYS3_ZR4-vjHD3A-DrVR0kOHZzV&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>HƯỚNG DẪN BẤM MÁY TÍNH TỌA ĐỘ VECTO TRONG KHÔNG GIAN (OXYZ)</td>
+<td><a class="link-btn" href="player.html?video=bA7xzxGEVGI" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1NcjwwJaP4bS3upDBLhql27N-bYbmGvRA&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM ( TRẮC NGHIỆM 4 ĐÁP ÁN )</td>
+<td><a class="link-btn" href="player.html?video=esfy-42I9cI" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1CkEvDuMZfasUu8zb4V6U25d06GhkfeBw/view?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM (TRẮC NGHIỆM ĐÚNG SAI - ĐIỀN ĐÁP ÁN)</td>
+<td><a class="link-btn" href="player.html?video=YtN_4BUaUZs" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/11R_-Q1CgIWlW6FqYOepPSKyXpWVlZS91/view?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1] ĐẶT HỆ TRỤC OXYZ VÀO HÌNH CHÓP - LĂNG TRỤ - HÌNH HỘP</td>
+<td><a class="link-btn" href="player.html?video=bU1fk3iV9ak" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1p7m7FOvj-tpyRmcliWMcURCXhZ3BVuG2/view?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2] TÍNH KHOẢNG CÁCH GIỮA 2 ĐT CHÉO NHAU BẰNG PP ĐẶT TRỤC</td>
+<td><a class="link-btn" href="player.html?video=NtsoOVgSuRg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1Ba3t1GTH5UPn1Bh3_AeLcUQcJQxiZoW8/view?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3] TÍNH GÓC GIỮA 2 ĐƯỜNG THẲNG - 2 MẶT PHẲNG BẰNG PP ĐẶT TRỤC</td>
+<td><a class="link-btn" href="player.html?video=QYM5VwUwVQo" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1d33cAfdvtfSjD4em785I6G1lnLMfQrdL/view?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 1 (ĐẠI)</td>
+<td><a class="link-btn" href="player.html?video=Q_q9L5YWvWc" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1RCfEtBK2A5bxVCPCzPnMEm3OtkhQiK4x?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 2 (ĐẠI)</td>
+<td><a class="link-btn" href="player.html?video=oo-lyw6q49s" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1LJj6a8XirZ2hltn2hVZWoqSe90MsPzfn?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 3 (ĐẠI)</td>
+<td><a class="link-btn" href="player.html?video=KPsiJ-ngWlg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1u7qGfMIduqwLwTQ6AnBziS45ZgNbEVgf?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 4 (ĐẠI + HÌNH)</td>
+<td><a class="link-btn" href="player.html?video=Tzffgkyf5mc" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1ZrRwYgncs5EYtuzpPEkC93ij49LQkBYc?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 5 (ĐẠI + HÌNH)</td>
+<td><a class="link-btn" href="player.html?video=FzzyePiVj4w" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1scrdp_MxsA9kYLmfWxySa7DoVR0xuvAU?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 6 (ĐẠI + HÌNH)</td>
+<td><a class="link-btn" href="player.html?video=oKzfc-CFoDw" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1Cq-3nEGYjQy1kP3VwGwmlfOEc5DJpNcZ?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 7 (ĐẠI + HÌNH)</td>
+<td><a class="link-btn" href="player.html?video=hPCeXpfMNoU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1jntQ-63L7oVfIWjWkBBDQZQmtwhEjnZc?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 8 (ĐẠI + HÌNH)</td>
+<td><a class="link-btn" href="player.html?video=uRDYA7sBymY" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1s4IVmD-7LDOagx5hqxmG-rZlcI7X1wa2?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 9 (ĐẠI + HÌNH)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1CVnuEzPDA-gD4_yCkfUF6kKtjBtwUEVZ?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 10 (ĐẠI + HÌNH)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/drive/folders/1DqFbdkxN1AX6VziJQ1rx41d64iVpwKT4?usp=drive_link" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1] TÍNH TỨ PHÂN VỊ Q1 VÀ Q3 CỦA MẪU SỐ LIỆU GHÉP NHÓM</td>
+<td><a class="link-btn" href="player.html?video=plGPuLhn2tI" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1FJPER1HvNN34uB4nJ3jQg08OMfdPb_0K/view" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2] TÍNH KHOẢNG TỨ PHÂN VỊ VÀ KHOẢNG BIẾN THIÊN</td>
+<td><a class="link-btn" href="player.html?video=bqWZUP0LkgY" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/13aUG8cN2ppBARZmwFxY3vbWovStqQ-gG/view" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>TÍNH SỐ TRUNG BÌNH, PHƯƠNG SAI VÀ ĐỘ LỆCH CHUẨN</td>
+<td><a class="link-btn" href="player.html?video=x0F9TsswdA4" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1449NxJnBfqf9yt6Rm6LOOlisUSpnmdUO/view" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ÔN TẬP THỐNG KÊ L12 - ỨNG DỤNG THỰC TẾ</td>
+<td><a class="link-btn" href="player.html?video=pqdAtynn9Io" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1AjlyjISaD5vAgY_fmWtJ_YYS9-iNIP9f&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1: Nguyên hàm cơ bản</td>
+<td><a class="link-btn" href="player.html?video=rzvtjkhG6og" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=10vD1SX0bP7HLycl1L88oa_i9R63fjxW3&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2: Nguyên hàm hàm hợp</td>
+<td><a class="link-btn" href="player.html?video=47fmE5Ok4bA" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1ozkB0rVVjPgS3ntziIpR7EvOnURh9uJg&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 3: Phương pháp đổi biến</td>
+<td><a class="link-btn" href="player.html?video=kmnOPgE6IOo" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1jYSGvs4fTzx-Hv5rhP9zJG7k-Wbwnpqn&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 4: Nguyên hàm hữu tỉ</td>
+<td><a class="link-btn" href="player.html?video=rciD9huIeQs" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wD_V8UDdbVOz-SBQrAX_Os2g2P-0trPW&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 5: Nguyên hàm hữu tỉ (Phần 2)</td>
+<td><a class="link-btn" href="player.html?video=LKa4HLDe3-o" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1totwb-Ewk7y9HqbU6fzksx3P8t0Pz5p6&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 6: Nguyên hàm lượng giác</td>
+<td><a class="link-btn" href="player.html?video=7DK0ZVsNgJQ" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1JYGaVK1bmFHZKbdTywCAyb2MSePRXu3F&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 7: Dùng đổi biến trong lượng giác</td>
+<td><a class="link-btn" href="player.html?video=eW3p2_212Po" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1Kww_xIYZV5iujKsZ_0y_uilIhHq_EaCG&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 8: Nguyên hàm từng phần (Phần 1)</td>
+<td><a class="link-btn" href="player.html?video=cE5nDTjjGAk" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=17bWh2PhQmatnNI0MtLW0_4lAUIxzIkEM&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 9: Nguyên hàm từng phần (Phần 2)</td>
+<td><a class="link-btn" href="player.html?video=ql2CAZPupAs" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=11DXy-HeogdfityBMIjzj4SmER2ga0RWC&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1: Tích phân xác định</td>
+<td><a class="link-btn" href="player.html?video=f3ovbIJ90tU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1euA4RIE2vvTzKPRQ1i380ZO0Tm3GfetE&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2: Tích phân đổi biến</td>
+<td><a class="link-btn" href="player.html?video=1pW8SmO9ATI" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1_GgrfEkGSgURBilMXoalq2brL9fx0MYA&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 3: Tích phân từng phần</td>
+<td><a class="link-btn" href="player.html?video=7QY9h8gjoHU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1scrb8sqftGHIHR4EEMPGun3h-tXZMQIg&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 4: Tích phân xác định trong các đề thi đại học</td>
+<td><a class="link-btn" href="player.html?video=FDaRpzYsJa8" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1e_gcLZ4r7G3CuWodOserulAcxy1vR7Yk&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1: Tính diện tích hình phẳng và V khối tròn xoay - bài toán không cho hình vẽ</td>
+<td><a class="link-btn" href="player.html?video=fSjUIZ1mnW8" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1tzCMT42n63XeqOGBDPMaLFz63iuu5yIn&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2: Tính diện tích hình phẳng có hình vẽ</td>
+<td><a class="link-btn" href="player.html?video=WxdX771puzE" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1af29O1z8ZCh1qsjcw633QACuQ-qMEt5p&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 3: Bài toán chuyển động</td>
+<td><a class="link-btn" href="player.html?video=9ZZ_5n31f-0" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1kOLxVwx1-_ngIiNkd83Yp1XKnC6ypGe-&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 4: Thể tích khối tròn xoay có hình vẽ</td>
+<td><a class="link-btn" href="player.html?video=r4LtYFs2EJw" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=14Bl02TbRX1fI0YyjW-Ib20MmrcmWow9W&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1: Phương pháp đổi biến</td>
+<td><a class="link-btn" href="player.html?video=exrmuIKHZLM" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1x3NN3n1jGNIpB5d54dvMA9kg4bAbFrjt&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2: Phương pháp từng phần</td>
+<td><a class="link-btn" href="player.html?video=ohivLY7y20Y" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12QypapSp9bnWqoIBmtYT45uoqmmcUUaa&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 3: Bài toán cho f phẩy và tìm f(x)</td>
+<td><a class="link-btn" href="player.html?video=KsyL217yQgk" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1fbstbKKmFB6fUUkwBMIMg257FhEZvTBT&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1</td>
+<td><a class="link-btn" href="player.html?video=EDXLzNpqQec" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1vreNYJpoKD5UxB_x4E0hFWX6ObbCu5Td&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2</td>
+<td><a class="link-btn" href="player.html?video=HKb1UEC4BlU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1uZYuJl3QwT3xK7akpZn79krOWDBCtDDf&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 3</td>
+<td><a class="link-btn" href="player.html?video=ahE3fIbDHxY" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1SWZ1QW0i5WfPJjv5Sa7une_ZhEHCYuhn&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1</td>
+<td><a class="link-btn" href="player.html?video=rvS-FnKeyk0" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=13FaWJv0kfNqx9IKvucftDXvaIMarpf5b&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2</td>
+<td><a class="link-btn" href="player.html?video=NfVnKYiJ600" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1UA4AxQVkfBB-oxqDYBSYOsQQRTd-XHdw&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 3</td>
+<td><a class="link-btn" href="player.html?video=uILFs7AnfSg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1j5zsNS3UZTrKxjjMKMB-SXrjfygioKzP&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1: Phương trình mặt cầu</td>
+<td><a class="link-btn" href="player.html?video=5aunyfuTN9Y" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1It7Y5hno-q2sKihbjR07UdD2QeDYW6t3&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2: Bấm máy hình không gian Oxyz</td>
+<td><a class="link-btn" href="player.html?video=m-uH-XRv2fk" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1_7FnU99OGq1I_9dtFYtiHV0yDX3Rt0Gv&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tọa độ hình chiếu - Điểm đối xứng</td>
+<td><a class="link-btn" href="player.html?video=3iNd4v7xQZE" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-pcFPYnnuX9-NN079gu-y4EzceDBkT8F&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Tìm điểm thuộc đường thẳng</td>
+<td><a class="link-btn" href="player.html?video=pCUZRzzHFtE" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1FapGwcliO4Ks0gDShjp1mS_N7byRDdBe&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Bài toán min max liên quan đến hình chiếu của điểm</td>
+<td><a class="link-btn" href="player.html?video=b-RYehbS5oM" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1hN-9Y0zxACynd_jujbUOVe0lZXMgD_Ze&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Điểm và đường đặc biệt trong tam giác</td>
+<td><a class="link-btn" href="player.html?video=R1vTXj4kBAA" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wZ3f4amar5D-WJGQPdr6ds2nATFFti_W&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 1: Đặt trục vào hình chóp</td>
+<td><a class="link-btn" href="player.html?video=vVZQui3bvQc" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1uruPgorle6f22H9e97qcLON0Z8FXrb4O&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phần 2: Đặt trục vào lăng trụ</td>
+<td><a class="link-btn" href="player.html?video=KPXVIDpIjgM" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1580SCOkn5YOL-Jly_Q01Ls5RKGsq_Zgo&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ 1</td>
+<td><a class="link-btn" href="player.html?video=4aYQ6RH9Arg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ 2</td>
+<td><a class="link-btn" href="player.html?video=Qe-jfXf9kTE" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ 3</td>
+<td><a class="link-btn" href="player.html?video=QZnkp7Jo2kU" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ 4</td>
+<td><a class="link-btn" href="player.html?video=Z7pP9HVH4HQ" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ 5</td>
+<td><a class="link-btn" href="player.html?video=n3HaFIta5Qg" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ 6</td>
+<td><a class="link-btn" href="player.html?video=tqXs_ygGq0o" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1zOSItDwiCt0ONMwbUKrjomPUUFzO1mj7&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: NGUYÊN HÀM CƠ BẢN</td>
+<td><span class="link-btn" target="_blank">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: NGUYÊN HÀM HÀM HỢP</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3]: NGUYÊN HÀM HỮU TỈ</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 4]: NGUYÊN HÀM LƯỢNG GIÁC</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>HƯỚNG DẪN BẤM MÁY TÍNH NGUYÊN HÀM</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=125Xbd8Yrc1Zu5-NzmBZ7_2U2okz2ZuIU&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>TÍNH TÍCH PHÂN</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=11tzp-ekbrBX9z7xDtEMU7tvTNtZ3UbhQ&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>HƯỚNG DẪN BẤM MÁY TÍNH TÍCH PHÂN</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=11tzp-ekbrBX9z7xDtEMU7tvTNtZ3UbhQ&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: TÍNH DIỆN TÍCH HÌNH PHẲNG &amp; THỂ TÍCH KHỐI TRÒN XOAY (KHÔNG HÌNH VẼ)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: TÍNH DIỆN TÍCH HÌNH PHẲNG CÓ HÌNH VẼ (P1)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>TÍNH DIỆN TÍCH HÌNH PHẲNG CÓ HÌNH VẼ (P2)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY CÓ HÌNH VẼ</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 4]: ỨNG DỤNG TRONG BÀI TOÁN CHUYỂN ĐỘNG</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 5]: BÀI TOÁN THỰC TẾ TÍNH DIỆN TÍCH</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 6]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY (KHÔNG CÓ HÌNH VẼ)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 7]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY (CÓ HÌNH VẼ ĐỒ THỊ)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 8]: TÍNH THỂ TÍCH KHỐI TRÒN XOAY QUANH TRỤC TUNG</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM: ỨNG DỤNG BÀI TOÁN CHUYỂN ĐỘNG - DẠNG BÀI ĐÚNG SAI</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM: ỨNG DỤNG HÌNH HỌC CỦA TÍCH PHÂN - DẠNG BÀI ĐÚNG SAI</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM: TỔNG ÔN TẬP NGUYÊN HÀM - TÍCH PHÂN</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM: TỔNG ÔN NGUYÊN HÀM - TÍCH PHÂN (DẠNG BÀI ĐÚNG SAI)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LUYỆN TẬP THÊM: TỔNG ÔN TẬP NGUYÊN HÀM - TÍCH PHÂN (DẠNG BÀI TRẢ LỜI NGẮN)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=12dMlSBehYGz1oyH86VUBgSEyEj1upW9C&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: XÁC ĐỊNH CÁC YẾU TỐ, TÍNH GÓC &amp; TÌM VỊ TRÍ TƯƠNG ĐỐI</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-AZ5VRkaulR3Jr3WNhIkUAbVBfROum5t&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: LẬP PHƯƠNG TRÌNH KHI BIẾT VECTƠ PHÁP TUYẾN &amp; ĐIỂM</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-AZ5VRkaulR3Jr3WNhIkUAbVBfROum5t&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3]: LẬP PHƯƠNG TRÌNH CÓ YẾU TỐ KHOẢNG CÁCH</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-AZ5VRkaulR3Jr3WNhIkUAbVBfROum5t&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: XÁC ĐỊNH CÁC YẾU TỐ, TÌM VỊ TRÍ TƯƠNG ĐỐI, TÍNH KHOẢNG CÁCH, TÍNH GÓC</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-tJeX4LPTP4Z0mvWMJJgdHqjyw1kk6CR&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: LẬP PHƯƠNG TRÌNH KHI BIẾT VECTƠ CHỈ PHƯƠNG &amp; ĐIỂM</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-tJeX4LPTP4Z0mvWMJJgdHqjyw1kk6CR&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3]: LẬP PHƯƠNG TRÌNH CÓ YẾU TỐ GIAO ĐIỂM</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-tJeX4LPTP4Z0mvWMJJgdHqjyw1kk6CR&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>LẬP PHƯƠNG TRÌNH MẶT CẦU &amp; BÀI TOÁN VỊ TRÍ TƯƠNG ĐỐI</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=10cOiQ4HCUECjGtZsyZ4UI-c_IokNeecO&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: TÌM ĐIỂM THUỘC ĐƯỜNG THẲNG</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: TÌM HÌNH CHIẾU &amp; ĐIỂM ĐỐI XỨNG</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3]: BÀI TOÁN MINMAX LIÊN QUAN ĐẾN HÌNH CHIẾU CỦA ĐIỂM</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 4]: ĐIỂM &amp; ĐƯỜNG ĐẶC BIỆT TRONG TAM GIÁC</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=10dldJikxzXu5wd95qAiNP3DNHSjJm9bs&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 1</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 2</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 3</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 4</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 5</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 6</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 7</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 8</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 9</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>ĐỀ SỐ 10</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1wys0cEjJFgUnECStrPn1S0GroknqKsZ4&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: CÔNG THỨC TÍNH XÁC SUẤT CÓ ĐIỀU KIỆN</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-CFDKcRvHVQqGFr_AHcxe_lP76-odMq3&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: TÍNH XÁC SUẤT KHI BIẾT TRƯỚC XÁC SUẤT THÀNH PHẦN</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1-Ak4hI3i9GGoTe_aEvjr_FDMYFX2h_gi&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 3]: TÍNH XÁC SUẤT THEO ĐỊNH NGHĨA - THEO CÔNG THỨC (PHẦN 1</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1KblhFgMYg1nH6OpO9i-7OWnqjeQQzALM&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 4]: TÍNH XÁC SUẤT THEO ĐỊNH NGHĨA - THEO CÔNG THỨC (PHẦN 2)</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1mPrQKINBiuUxgFZdXQYw6kwDVaTmcZVM&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 5]: BẢNG DỮ LIỆU 2x2</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=18yIKsSqA22-06S2mWmfGR-8QsGp7VL8z&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 1]: CÔNG THỨC XÁC SUẤT TOÀN PHẦN</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=1Qx1athZce4JvHVpzsavGrHUs177vnXHC&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>[TIẾT 2]: CÔNG THỨC BAYES</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/open?id=16WgB8U-E-tqnAspB2C10IZLzdCKLXYJK&amp;usp=drive_copy" target="_blank">Tài liệu</a></td>
+</tr>
 </tbody>
-            </table>
-        </div>
-
-        <!-- Trang nội dung Vật lý -->
-        <div id="physics-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>⚛️ Môn Vật lý</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Bài giải</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Động học chất điểm</td>
-                        <td><a href="https://www.youtube.com/watch?v=3L2bCjC0K0Q" class="link-btn" target="_blank" rel="noopener">Xem video</a></td>
-                        <td><span class="disabled-link">Bài giải</span></td>
-                        <td><a href="https://drive.google.com/file/d/1D5e6f7g8h9i0j1k2l3m4n5o6p7q8s9t/view" class="link-btn" target="_blank" rel="noopener">Tài liệu</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dao động cơ học</td>
-                        <td><span class="disabled-link">Xem video</span></td>
-                        <td><a href="https://drive.google.com/file/d/1E6f7g8h9i0j1k2l3m4n5o6p7q8t9u0v/view" class="link-btn" target="_blank" rel="noopener">Bài giải</a></td>
-                        <td><span class="disabled-link">Tài liệu</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Trang nội dung Hóa học -->
-        <div id="chemistry-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>🧪 Môn Hóa học</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Bài giải</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cân bằng hóa học</td>
-                        <td><a href="https://www.youtube.com/watch?v=5M6n5k2m4n5" class="link-btn" target="_blank" rel="noopener">Xem video</a></td>
-                        <td><span class="disabled-link">Bài giải</span></td>
-                        <td><a href="https://drive.google.com/file/d/1H9i0j1k2l3m4n5o6p7q8t9u0v1w2x3y/view" class="link-btn" target="_blank" rel="noopener">Tài liệu</a></td>
-                    </tr>
-                    <tr>
-                        <td>Phản ứng oxi hóa khử</td>
-                        <td><span class="disabled-link">Xem video</span></td>
-                        <td><a href="https://drive.google.com/file/d/1I0j1k2l3m4n5o6p7q8t9u0v1w2x3y4z/view" class="link-btn" target="_blank" rel="noopener">Bài giải</a></td>
-                        <td><span class="disabled-link">Tài liệu</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Trang nội dung Lịch sử -->
-        <div id="history-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>📚 Môn Lịch sử</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Bài giải</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lịch sử Việt Nam cận đại</td>
-                        <td><a href="https://www.youtube.com/watch?v=7O8p9q0r1s2" class="link-btn" target="_blank" rel="noopener">Xem video</a></td>
-                        <td><span class="disabled-link">Bài giải</span></td>
-                        <td><a href="https://drive.google.com/file/d/1L3m4n5o6p7q8t9u0v1w2x3y4z5a6b7c/view" class="link-btn" target="_blank" rel="noopener">Tài liệu</a></td>
-                    </tr>
-                    <tr>
-                        <td>Cách mạng tháng 8</td>
-                        <td><span class="disabled-link">Xem video</span></td>
-                        <td><a href="https://drive.google.com/file/d/1M4n5o6p7q8t9u0v1w2x3y4z5a6b7c8d/view" class="link-btn" target="_blank" rel="noopener">Bài giải</a></td>
-                        <td><span class="disabled-link">Tài liệu</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Trang nội dung Sinh học -->
-        <div id="biology-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>🧬 Môn Sinh học</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Bài giải</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Di truyền học Mendel</td>
-                        <td><a href="https://www.youtube.com/watch?v=9Q0r1s2t3u4" class="link-btn" target="_blank" rel="noopener">Xem video</a></td>
-                        <td><span class="disabled-link">Bài giải</span></td>
-                        <td><a href="https://drive.google.com/file/d/1P7q8t9u0v1w2x3y4z5a6b7c8d9e0f1g/view" class="link-btn" target="_blank" rel="noopener">Tài liệu</a></td>
-                    </tr>
-                    <tr>
-                        <td>Sinh thái học</td>
-                        <td><span class="disabled-link">Xem video</span></td>
-                        <td><a href="https://drive.google.com/file/d/1Q8t9u0v1w2x3y4z5a6b7c8d9e0f1g2h/view" class="link-btn" target="_blank" rel="noopener">Bài giải</a></td>
-                        <td><span class="disabled-link">Tài liệu</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Trang nội dung Tiếng Anh -->
-        <div id="english-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>🇬🇧 Môn Tiếng Anh</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Bài giải</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Grammar: Present Perfect</td>
-                        <td><a href="https://www.youtube.com/watch?v=1S2t3u4v5w6" class="link-btn" target="_blank" rel="noopener">Xem video</a></td>
-                        <td><span class="disabled-link">Bài giải</span></td>
-                        <td><a href="https://drive.google.com/file/d/1T1w2x3y4z5a6b7c8d9e0f1g2h3i4j5k/view" class="link-btn" target="_blank" rel="noopener">Tài liệu</a></td>
-                    </tr>
-                    <tr>
-                        <td>IELTS Writing Task 2</td>
-                        <td><span class="disabled-link">Xem video</span></td>
-                        <td><a href="https://drive.google.com/file/d/1U2x3y4z5a6b7c8d9e0f1g2h3i4j5k6l/view" class="link-btn" target="_blank" rel="noopener">Bài giải</a></td>
-                        <td><span class="disabled-link">Tài liệu</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Trang nội dung Địa lý -->
-        <div id="geography-content" class="content-page">
-            <button class="back-btn" onclick="goBack()">← Quay lại</button>
-            <h2>🌍 Môn Địa lý</h2>
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Tên bài giảng</th>
-                        <th>Video</th>
-                        <th>Bài giải</th>
-                        <th>Tài liệu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Địa lý tự nhiên Việt Nam</td>
-                        <td><a href="https://www.youtube.com/watch?v=3U4v5w6x7y8" class="link-btn" target="_blank" rel="noopener">Xem video</a></td>
-                        <td><span class="disabled-link">Bài giải</span></td>
-                        <td><a href="https://drive.google.com/file/d/1X5a6b7c8d9e0f1g2h3i4j5k6l7m8n9o/view" class="link-btn" target="_blank" rel="noopener">Tài liệu</a></td>
-                    </tr>
-                    <tr>
-                        <td>Biến đổi khí hậu</td>
-                        <td><span class="disabled-link">Xem video</span></td>
-                        <td><a href="https://drive.google.com/file/d/1Y6b7c8d9e0f1g2h3i4j5k6l7m8n9o0p/view" class="link-btn" target="_blank" rel="noopener">Bài giải</a></td>
-                        <td><span class="disabled-link">Tài liệu</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Modal xem trước -->
-        <div id="preview-modal" class="preview-modal">
-            <div class="preview-content">
-                <button class="preview-close" onclick="closePreview()">×</button>
-                <div id="preview-body"></div>
-            </div>
-        </div>
-
-    <script>
+</table>
+</div>
+<!-- Trang nội dung Vật lý -->
+<div class="content-page" id="physics-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>⚛️ Môn Vật lý</h2>
+<table class="content-table">
+<thead>
+<tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Bài giải</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Động học chất điểm</td>
+<td><a class="link-btn" href="https://www.youtube.com/watch?v=3L2bCjC0K0Q" rel="noopener" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1D5e6f7g8h9i0j1k2l3m4n5o6p7q8s9t/view" rel="noopener" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Dao động cơ học</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1E6f7g8h9i0j1k2l3m4n5o6p7q8t9u0v/view" rel="noopener" target="_blank">Bài giải</a></td>
+<td><span class="disabled-link">Tài liệu</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Trang nội dung Hóa học -->
+<div class="content-page" id="chemistry-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>🧪 Môn Hóa học</h2>
+<table class="content-table">
+<thead>
+<tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Bài giải</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cân bằng hóa học</td>
+<td><a class="link-btn" href="https://www.youtube.com/watch?v=5M6n5k2m4n5" rel="noopener" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1H9i0j1k2l3m4n5o6p7q8t9u0v1w2x3y/view" rel="noopener" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Phản ứng oxi hóa khử</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1I0j1k2l3m4n5o6p7q8t9u0v1w2x3y4z/view" rel="noopener" target="_blank">Bài giải</a></td>
+<td><span class="disabled-link">Tài liệu</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Trang nội dung Lịch sử -->
+<div class="content-page" id="history-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>📚 Môn Lịch sử</h2>
+<table class="content-table">
+<thead>
+<tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Bài giải</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lịch sử Việt Nam cận đại</td>
+<td><a class="link-btn" href="https://www.youtube.com/watch?v=7O8p9q0r1s2" rel="noopener" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1L3m4n5o6p7q8t9u0v1w2x3y4z5a6b7c/view" rel="noopener" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Cách mạng tháng 8</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1M4n5o6p7q8t9u0v1w2x3y4z5a6b7c8d/view" rel="noopener" target="_blank">Bài giải</a></td>
+<td><span class="disabled-link">Tài liệu</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Trang nội dung Sinh học -->
+<div class="content-page" id="biology-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>🧬 Môn Sinh học</h2>
+<table class="content-table">
+<thead>
+<tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Bài giải</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Di truyền học Mendel</td>
+<td><a class="link-btn" href="https://www.youtube.com/watch?v=9Q0r1s2t3u4" rel="noopener" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1P7q8t9u0v1w2x3y4z5a6b7c8d9e0f1g/view" rel="noopener" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Sinh thái học</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1Q8t9u0v1w2x3y4z5a6b7c8d9e0f1g2h/view" rel="noopener" target="_blank">Bài giải</a></td>
+<td><span class="disabled-link">Tài liệu</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Trang nội dung Tiếng Anh -->
+<div class="content-page" id="english-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>🇬🇧 Môn Tiếng Anh</h2>
+<table class="content-table">
+<thead>
+<tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Bài giải</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grammar: Present Perfect</td>
+<td><a class="link-btn" href="https://www.youtube.com/watch?v=1S2t3u4v5w6" rel="noopener" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1T1w2x3y4z5a6b7c8d9e0f1g2h3i4j5k/view" rel="noopener" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>IELTS Writing Task 2</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1U2x3y4z5a6b7c8d9e0f1g2h3i4j5k6l/view" rel="noopener" target="_blank">Bài giải</a></td>
+<td><span class="disabled-link">Tài liệu</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Trang nội dung Địa lý -->
+<div class="content-page" id="geography-content">
+<button class="back-btn" onclick="goBack()">← Quay lại</button>
+<h2>🌍 Môn Địa lý</h2>
+<table class="content-table">
+<thead>
+<tr>
+<th>Tên bài giảng</th>
+<th>Video</th>
+<th>Bài giải</th>
+<th>Tài liệu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Địa lý tự nhiên Việt Nam</td>
+<td><a class="link-btn" href="https://www.youtube.com/watch?v=3U4v5w6x7y8" rel="noopener" target="_blank">Xem video</a></td>
+<td><span class="disabled-link">Bài giải</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1X5a6b7c8d9e0f1g2h3i4j5k6l7m8n9o/view" rel="noopener" target="_blank">Tài liệu</a></td>
+</tr>
+<tr>
+<td>Biến đổi khí hậu</td>
+<td><span class="disabled-link">Xem video</span></td>
+<td><a class="link-btn" href="https://drive.google.com/file/d/1Y6b7c8d9e0f1g2h3i4j5k6l7m8n9o0p/view" rel="noopener" target="_blank">Bài giải</a></td>
+<td><span class="disabled-link">Tài liệu</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Modal xem trước -->
+<div class="preview-modal" id="preview-modal">
+<div class="preview-content">
+<button class="preview-close" onclick="closePreview()">×</button>
+<div id="preview-body"></div>
+</div>
+</div>
+<script>
         // Mật khẩu cho từng môn học
         const passwords = {
             math: 'toan123',
@@ -1750,8 +1735,7 @@
             });
         });
     </script>
-
-    <script>
+<script>
     (function() {
         var ua = navigator.userAgent || navigator.vendor || '';
         ua = ua.toLowerCase();
@@ -1790,8 +1774,5 @@
     }
     document.addEventListener('click', handleFirstClick, { once: true });
 </script>
-
-
-</body>
-
+</div></body>
 </html>
