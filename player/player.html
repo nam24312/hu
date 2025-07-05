@@ -40,6 +40,14 @@
 (function(){
   const params = new URLSearchParams(location.search);
   let raw = params.get('video') || '';
+
+// 🚫 Chặn nếu video chứa URL trỏ ngược về chính site hoặc lồng quá nhiều https
+if ((raw || '').includes('nam24312.github.io') || (raw.match(/https?:\/\//g) || []).length > 1) {
+  document.body.innerHTML =
+    '<h2 style="text-align:center">🚫 Link không hợp lệ!</h2>';
+  throw new Error('Blocked: nested URL');
+}
+
   let provider = 'youtube';
   let id = '';
 
