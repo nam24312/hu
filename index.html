@@ -1791,15 +1791,25 @@
     document.addEventListener('click', handleFirstClick, { once: true });
 </script>
 <script>
-    document.querySelectorAll('a[href*="youtu"]').forEach(link => {
+  // Chặn click & mở player cho YouTube + Rumble
+  document.querySelectorAll('a.link-btn').forEach(link => {
+    // Nhận diện link video
+    const isYoutube = link.href.includes('youtu');
+    const isRumble  = link.href.includes('rumble.com');
+
+    if (isYoutube || isRumble) {
       link.addEventListener('click', e => {
-        e.preventDefault();
+        e.preventDefault();                         // Không mở thẳng URL gốc
         const encoded = encodeURIComponent(link.href);
-        window.open(`player/player.html?video=${encoded}&token=ok`, '_blank');
+        window.open(
+          `player/player.html?video=${encoded}&token=ok`,
+          '_blank'
+        );
       });
-    });
-  </script>
-  
+    }
+  });
+</script>
+
   
 
 </body>
