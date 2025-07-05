@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Phát video (YouTube + Rumble)</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    body{
+      background:#111;color:#fff;font-family:sans-serif;
+      display:flex;align-items:center;justify-content:center;
+      height:100vh;margin:0;
+    }
+    .plyr__video-embed iframe{top:-50%;height:200%;position:relative;}
+    .container{max-width:800px;aspect-ratio:16/9;width:100%;}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="plyr__video-embed" id="player">
+    <iframe src="" allowfullscreen allow="autoplay"></iframe>
+  </div>
+</div>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('token');
+
+  // 🚫 Chặn truy cập nếu thiếu/sai token
+  if (token !== 'ok') {
+    document.body.innerHTML =
+      "<h2 style='color:white;text-align:center'>🚫 Truy cập không hợp lệ!</h2>";
+    throw new Error("Truy cập bị chặn: thiếu hoặc sai token");
+  }
+
+  /* ------------ Xác định nền tảng & lấy ID ------------ */
+  let rawVideo = urlParams.get('video');        // có thể là ID hoặc URL
+  let provider  = 'youtube';                    // mặc định
+  let videoId   = '';
+
+  if (rawVideo && rawVideo.includes('http')) {
+    try {
+      const decoded = decodeURIComponent(rawVideo);
+      const urlObj  = new URL(decoded);
+
+      // Tự động nhận dạng domain
+      if (urlObj.hostname.includes('rumble.com')) provider = 'rumble';
+      if (urlObj.hostname.includes('youtu'))      provider = 'youtube';
+
+      if (provider === 'youtube') {
+        videoId = urlObj.hostname.includes('youtu.be')
+          ? urlObj.pathname.slice(1)              // youtu.be/<id>
+          : urlObj.searchParams.get('v');         // youtube.com/watch?v=<id>
+      } else { // rumble
+        /* path dạng /v3k5kfy-video-tua-gi.html
+           => cắt đoạn sau dấu “/”, lấy phần trước “-” hoặc “.html” */
+        const filePart = urlObj.pathname.split('/').pop();   // v3k5kfy-video.html
+        videoId = filePart.split('-')[0].replace('.html',''); // v3k5kfy
+      }
+    } catch(e) {
+      console.error('Không thể phân tích video URL:', e);
+    }
+  } else {
+    // Trường hợp chỉ chuyền ID thô
+    videoId = rawVideo;
+  }
+
+  /* ------------ Gắn iframe theo nền tảng ------------ */
+  const iframe = document.querySelector('#player iframe');
+  if (provider === 'youtube') {
+    iframe.src =
+      `https://www.youtube.com/embed/${videoId}` +
+      `?rel=0&modestbranding=1&showinfo=0&enablejsapi=1`;
+    new Plyr('#player');           // Plyr hỗ trợ sẵn YouTube
+  } else if (provider === 'rumble') {
+    iframe.src = `https://rumble.com/embed/${videoId}/?rel=0`;
+    // Plyr chưa hỗ trợ Rumble ► không khởi tạo Plyr để tránh lỗi
+  } else {
+    document.body.innerHTML =
+      "<h2 style='color:white;text-align:center'>❓ Không nhận diện được nền tảng!</h2>";
+  }
+</script>
+
+</body>
+</html>
 
