@@ -99,12 +99,6 @@ if ((raw || '').includes('nam24312.github.io') || (raw.match(/https?:\/\//g) || 
     document.body.innerHTML = '<h2 style="text-align:center">❓ Không nhận diện được nền tảng!</h2>';
     return;
   }
-
-  /* --------- Referrer guard (tuỳ chọn) -------- */
-  const ref = document.referrer;
-  if (!/nam24312\.github\.io\/tao|localhost/.test(ref)){
-    document.body.innerHTML = '<h2 style="text-align:center">🚫 Truy cập không hợp lệ!</h2>';
-  }
 })();
 </script>
 </body>
