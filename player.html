@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Phát video (YouTube + Rumble)</title>
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-  <style>
+<meta charset="utf-8"/>
+<title>Phát video (YouTube + Rumble)</title>
+<link href="https://cdn.plyr.io/3.7.8/plyr.css" rel="stylesheet"/>
+<style>
     body{
       background:#111;
       color:#fff;
@@ -30,15 +31,55 @@
 </head>
 <body>
 <div class="container">
-  <div class="plyr__video-embed" id="player">
-    <iframe src="" allowfullscreen allow="autoplay"></iframe>
-  </div>
+<div class="plyr__video-embed" id="player">
+<iframe allow="autoplay" allowfullscreen="" src=""></iframe>
 </div>
-
+</div>
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 <script>
 (function(){
   const params = new URLSearchParams(location.search);
+
+  /* ----- Danh sách video (menu) ----- */
+  const listParam = params.get('list');          // v6rjvcp,v6vm8cv,IDytb...
+  const pubCode   = params.get('rpub') || '4';   // mã pub rumble mặc định
+  if (listParam) {
+    const list = listParam.split(',').map(x => x.trim()).filter(Boolean);
+    if (list.length) {
+      // Ẩn khung đơn lẻ
+      document.querySelector('.container').style.display = 'none';
+      // Tạo UI menu
+      const wrapper = document.createElement('div');
+      wrapper.style.maxWidth = '900px';
+      wrapper.style.margin = 'auto';
+      wrapper.innerHTML = `
+        <h2 style="margin-bottom:20px">Chọn video</h2>
+        <div id="btnGroup" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:24px"></div>
+        <div id="multiContainer" style="max-width:800px;margin:auto;aspect-ratio:16/9"></div>
+      `;
+      document.body.prepend(wrapper);
+      const btnGroup = document.getElementById('btnGroup');
+      const multi    = document.getElementById('multiContainer');
+      function genSrc(vid){
+        const isRum = /^v[0-9a-z]{6,8}$/i.test(vid);
+        return isRum
+          ? \`https://rumble.com/embed/\${vid}/?rel=0&pub=\${pubCode}\`
+          : \`https://www.youtube.com/embed/\${vid}?rel=0&modestbranding=1\`;
+      }
+      list.forEach((vid, idx) => {
+        const b = document.createElement('button');
+        b.textContent = 'Video ' + (idx+1);
+        b.style.cssText = 'padding:10px 18px;background:#1db954;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:15px';
+        b.onclick = () => {
+          multi.innerHTML = '<iframe src="'+genSrc(vid)+'" allowfullscreen style="width:100%;height:100%;border:none"></iframe>';
+        };
+        btnGroup.appendChild(b);
+      });
+      // phát video đầu
+      multi.innerHTML = '<iframe src="'+genSrc(list[0])+'" allowfullscreen style="width:100%;height:100%;border:none"></iframe>';
+      return; // dừng code bên dưới
+    }
+  }
   let raw = params.get('video') || '';
 
 // 🚫 Chặn nếu video chứa URL trỏ ngược về chính site hoặc lồng quá nhiều https
