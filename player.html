@@ -101,10 +101,7 @@ if ((raw || '').includes('nam24312.github.io') || (raw.match(/https?:\/\//g) || 
   }
 
   /* --------- Referrer guard (tuỳ chọn) -------- */
-  const ref = document.referrer;
-  if (!/nam24312\.github\.io\/tao|localhost/.test(ref)){
-    document.body.innerHTML = '<h2 style="text-align:center">🚫 Truy cập không hợp lệ!</h2>';
-  }
+  // Referrer check removed - allow all origins
 })();
 </script>
 </body>
